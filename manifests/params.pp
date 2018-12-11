@@ -40,6 +40,7 @@ class haproxy::params {
         'maxconn' => '8000',
       }
       $config_validate_cmd = '/usr/sbin/haproxy -f % -c'
+      $restart_command   = '/bin/systemctl reload haproxy.service'
       # Single instance:
       $config_dir        = '/etc/haproxy'
       $config_file       = '/etc/haproxy/haproxy.cfg'
