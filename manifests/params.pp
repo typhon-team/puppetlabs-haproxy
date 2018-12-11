@@ -8,6 +8,7 @@ class haproxy::params {
   case $::osfamily {
     'Archlinux', 'Debian', 'Redhat', 'Gentoo', 'Suse' : {
       $package_name     = 'haproxy'
+      $restart_command  = '/bin/systemctl reload haproxy.service'
       $global_options   = {
         'log'     => "${::ipaddress} local0",
         'chroot'  => '/var/lib/haproxy',

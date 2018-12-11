@@ -85,7 +85,7 @@ class haproxy (
   $service_manage   = true,
   $global_options   = $haproxy::params::global_options,
   $defaults_options = $haproxy::params::defaults_options,
-  $restart_command  = undef,
+  $restart_command  = $haproxy::params::restart_command,
   $custom_fragment  = undef,
   $config_file      = $haproxy::params::config_file,
 
